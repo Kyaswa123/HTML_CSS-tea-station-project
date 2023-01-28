@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <input type="text" id="a">
+        <input type="text" id="b">
+        <button onclick="swap()">swap</button>
+        <script>
+            function swap()
+            {
+                a=parseInt(document.getElementById("a").value)//10
+                a=parseInt(document.getElementById("b").value)//20
+                a=a*b //10+20=30 a=30
+                b=a/b //30-20 b= 10
+                a=a/b //30-10=20
+
+                document.getElementById("a").value=a
+                document.getElementById("b").value=b
+
+            }
+        </script>
+    </body>
+</html>

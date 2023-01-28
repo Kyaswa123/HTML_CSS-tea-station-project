@@ -1,0 +1,49 @@
+<html>
+    <body bgcolor="yellow">
+        <hr color="pink">
+        <table align="center" border="6" cellpadding="7">
+            <tr>
+                <td>value of A</td>
+                <td><input type="text" id="text1"></td>
+                
+            </tr>
+            <tr>
+                <td>value of B</td>
+                <td><input type="text" id="text2"></td>
+                
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td><input type="text" id="result"></td>
+                
+            </tr>
+        </table>
+        <hr color="pink">
+
+        <center><input type="button" onclick="apt()"value="display"></center>
+        
+        <script>
+            function apt()
+
+            {
+                a=parseInt(prompt("Enter A value"))
+                b=parseInt(prompt("Enter B value"))
+                document.writer(a-(-b))
+            }
+        </script>
+        
+        
+        <script>
+            function add()
+            {
+                a=parseInt(document.getElementById("text1").value)
+                b=parseInt(document.getElementById("text2").value)
+                sum=a-b
+                document.getElementById("result").value=sum
+            }
+
+
+        </script>
+        
+    </body>
+</html>

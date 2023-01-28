@@ -1,0 +1,14 @@
+<script>
+    function SwapValues()
+    {
+        tmp = document.getElementById("a").value;
+
+        document.getElementById("a").value= document.getElementById("b").value
+        document.getElementById("b")Value=tmp
+    }
+</script>
+<body>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <input type="button" onclick="SwapValues()" value="Swap">
+</body>
