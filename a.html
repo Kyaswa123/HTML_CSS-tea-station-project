@@ -1,0 +1,63 @@
+<form>
+    <label>Account Number:</label>
+    <input type="text" id="account" name="account"><br><br>
+    <label>PIN:</label>
+    <input type="password" id="pin" name="pin"><br><br>
+    <label>Transaction:</label>
+    <select id="transaction" name="transaction">
+      <option value="deposit">Deposit</option>
+      <option value="withdrawal">Withdrawal</option>
+      <option value="balance">Balance Inquiry</option>
+    </select><br><br>
+    <label>Amount:</label>
+    <input type="text" id="amount" name="amount"><br><br>
+<input type="button" value="Submit" onclick="submitTransaction()">
+  </form>
+
+
+
+  <script>
+    var accountBal = 0;
+    limit=700
+    function submitTransaction() {
+
+       account = document.getElementById("account").value;
+       pin = document.getElementById("pin").value;
+       transaction = document.getElementById("transaction").value;
+       amount =parseInt(document.getElementById("amount").value);
+   
+   
+      if (transaction=="deposit") {    
+        
+        accountBal+=amount
+      } 
+      else if (transaction=="withdrawal") {
+        if(amount>=limit && amount<=accountBal)
+        {
+          alert("limit cross")
+        
+        }
+        if(amount%100==0)
+        if(amount<accountBal)//300<500
+        {
+          accountBal-=amount
+        }
+        else
+        {
+         alert("overdraft")
+        }
+        else{
+          alert("multiple of 100")
+          return
+        }
+     
+       
+      } 
+      else if (transaction=="balance") {
+
+        alert("currentbalance"+accountBal)
+        return
+      }
+      alert("currentbalance"+accountBal)
+    }
+  </script>
